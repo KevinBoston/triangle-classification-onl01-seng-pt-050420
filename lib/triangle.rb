@@ -9,7 +9,7 @@ class Triangle
     sides << side1
     sides << side2
     sides << side3
-    if sides.include?(0) raise TriangleError
+    raise TriangleError if sides.include?(0)
   end
   
   def kind 

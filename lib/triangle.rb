@@ -22,11 +22,11 @@ class Triangle
   
   def name_triangle
     if @side1 == @side2 && @side1 == @side3 && @side2 == @side3
-     "equilateral"
+     :equilateral
      elsif @side1 == @side2 && @side1 == @side3 && @side2 != @side3
-        "isoceles"
+        :isoceles
      else 
-      "scalene"
+      :scalene
      end
   end
     

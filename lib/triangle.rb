@@ -13,7 +13,7 @@ class Triangle
   end
   
   def kind 
-    valid? ? name_triangle : raise TriangleError     
+    valid ? name_triangle : raise TriangleError     
   end
   
   def name_triangle
@@ -26,7 +26,7 @@ class Triangle
      end
   end
     
-  def valid?
+  def valid
     (@side1 + @side2 > @side3) && (@side1 + @side3 > @side2) && (@side3 + @side2 > @side1)
   end
   

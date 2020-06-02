@@ -7,6 +7,7 @@ class Triangle
     @side3 = side3
     sides = []
     sides << side1, side2, side3
+    if sides.include?(0) raise TriangleError
   end
   
   def kind 
@@ -26,8 +27,7 @@ class Triangle
   end
     
   def valid?
-    if (@side1 + @side2 > @side3) && (@side1 + @side3 > @side2) && (@side3 + @side2 > @side1)
-  end
+    (@side1 + @side2 > @side3) && (@side1 + @side3 > @side2) && (@side3 + @side2 > @side1)
   end
   
  class TriangleError < StandardError

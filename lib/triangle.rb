@@ -9,6 +9,7 @@ class Triangle
     @side3 = side3
     @@all << self 
   end
+  
   def kind 
     if valid? 
       if @side1 == @side2 || @side1 == @side3

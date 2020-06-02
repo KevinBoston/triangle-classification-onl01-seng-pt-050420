@@ -13,7 +13,11 @@ class Triangle
   end
   
   def kind 
-    valid ? name_triangle : raise TriangleError     
+    if valid 
+      name_triangle 
+    else
+      raise TriangleError     
+    end
   end
   
   def name_triangle

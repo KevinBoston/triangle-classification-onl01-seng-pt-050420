@@ -11,19 +11,13 @@ class Triangle
   end
   def kind 
     if valid? 
-      if @side1 == @side2
+      if @side1 == @side2 || @side1 == @side3
         if @side1 == @side3
           "equilateral"
         else 
           "isosceles"
       else
         "scalene"
-      end
-    end
-        
-        
-        
-     # end
     else raise TriangleError
   end
   

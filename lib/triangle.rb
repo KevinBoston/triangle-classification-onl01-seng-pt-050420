@@ -9,21 +9,20 @@ class Triangle
   end
   
   def kind 
-    if valid? 
-      if @side1 == @side2 || @side1 == @side3
-        if @side1 == @side3
-          "equilateral"
-        else 
-          "isosceles"
-      else
-        "scalene"
-    else raise TriangleError
-      end
-    end
+    valid? ? name_triangle : raise TriangleError 
+      
   end
   def name_triangle
     if @side1 == @side2 || @side1 == @side3
       if @side2 == @side3
+        "equilateral"
+      else
+        "isoceles"
+      end
+    else 
+      "scalene"
+    end
+  end
     
   def valid?
     if (@side1 + @side2 > @side3) && (@side1 + @side3 > @side2) && (@side3 + @side2 > @side1)
